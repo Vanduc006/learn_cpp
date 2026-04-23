@@ -17,6 +17,11 @@ int main() {
         int value; cin >> value;
         v.push_back(value);
     }
+    cout << *min_element(v.begin(), v.end()) << endl;
+    cout << *max_element(v.begin(), v.end()) << endl;
+    cout << accumulate(v.begin(), v.end(), 0);
 
-    
+
+
+
 }
