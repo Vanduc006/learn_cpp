@@ -11,25 +11,29 @@ int main() {
     #endif
 
     int n; cin >> n;
-    set<int> s;
+    multiset<int> ms;
     for (int i=0; i < n; i++) {
         int value; cin >> value;
-        s.insert(value);
+        ms.insert(value);
     }
 
     cin >> n;
     for (int i=0; i < n; i++) {
         int x; int value; cin >> x >> value;
         if (x == 1) {
-            s.insert(value);
+            ms.insert(value);
         }
         if (x == 2) {
-            if (s.count(value)) {
-                s.erase(value);
+            multiset<int>::iterator it = ms.find(value);
+            if (it != ms.end()) {
+                ms.erase(it);
             }
+            // if (ms.count(value)) {
+            //     s.erase(value);
+            // }
         }
         if (x == 3) {
-            if (s.count(value)) {
+            if (ms.count(value) > 0) {
                 cout << "YES" << endl;
             } else {
                 cout << "NO" << endl;

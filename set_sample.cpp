@@ -12,11 +12,16 @@ int main() {
 
     // each value is unique
     // auto sort 1 2 3
+    // multiset<int> sm; can be store value multi times
+        // find
+        // count
+        // erease
     set<int> s = {1, 2, 3, 7, 9};
+    
 
     // insert 0(logN)
     // find O(logN) : Binary Sreach Tree
-    // cout
+    // count
     // erease(int value)
     s.insert(4);
 
