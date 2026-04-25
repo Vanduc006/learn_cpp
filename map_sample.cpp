@@ -28,5 +28,8 @@ int main() {
     }
 
     // insert O(logN)
+    // find
+    // count
+    // erase
 
 }
