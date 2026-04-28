@@ -1,5 +1,6 @@
 #include <iostream>
 #include <bits/stdc++.h>
+#include <vector>
 using namespace std;
 
 using ll = long long;
@@ -12,13 +13,14 @@ int main() {
 
     int n; int m; cin >> n >> m;
     map<int, int> mp;
-
+    vector<int> v;
     for (int i=0; i < n; i++) {
         int value; cin >> value;
         if (mp.count(value) == 1) {
             continue;
         } else {
             mp[value]++;
+            v.push_back(value);
         }
     }
 
@@ -31,9 +33,15 @@ int main() {
         }
     }
 
-    for (pair<int, int> p : mp) {
-        if (p.second == 2) {
-            cout << p.first << " ";
+    // for (pair<int, int> p : mp) {
+    //     if (p.second == 2) {
+    //         cout << p.first << " ";
+    //     }
+    // }
+
+    for (int x : v) {
+        if (mp[x] == 2) {
+            cout << x << " ";
         }
     }
 }

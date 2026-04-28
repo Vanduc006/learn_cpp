@@ -43,4 +43,31 @@ int main() {
 
     for (char x : s) cout << x;
 
+    // tolower(char) return ascii
+    // toupper(char) return ascii
+    // isdigit(char)
+    // islower(char)
+    // isupper(char)
+    // isalpha(char)
+    cout << endl;
+    string text = "Nguyen VAN Duc";
+    for (char &x : text) x = toupper(x);
+    cout << text << endl;
+
+    // stringstream (perform like split ?)
+    text = "....hello nguyen...van  duc...   ";
+    for (char &x : text) {
+        if (x == '.') x = ' ';
+    }
+    stringstream ss(text);
+    string w;
+    while (ss >> w) {
+        cout << w << endl;
+    }
+
+    // stoi(string) : string to int
+    // stoll(string) : string to long long
+    // stod(string) : string to double
+    // to_string(int, d, ll ) : 
+
 }

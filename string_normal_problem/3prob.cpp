@@ -9,6 +9,15 @@ int main() {
     freopen("../input.txt","r",stdin);
     freopen("../output.txt","w",stdout);
     #endif
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+
+    string s; getline(cin, s);
+    int sum=0;
+    for (char x : s) {
+        if (isdigit(x) != 0) {
+            sum += x - '0';
+            // cout << x << endl;
+        }
+    }
+    cout << sum;
+
 }
