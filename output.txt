@@ -1,4 +1,6 @@
-1
-3
-5
-2
+Phuong : 1.00
+Phong : 7.00
+Nhung : 8.71
+Nam : 9.00
+Lan : 6.87
+Hanh : 5.00
