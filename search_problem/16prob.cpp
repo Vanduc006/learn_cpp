@@ -5,19 +5,6 @@ using namespace std;
 
 using ll = long long;
 
-// int upperbound(vector<int> v, int x) {
-//     int l=0; int r=v.size(); int count=0;
-//     while(l<=r) {
-//         int mid = (l+r)/2;
-//         if (v[mid] >= x) {
-//             count++;
-//             l = mid + 1;
-//         } else r = mid - 1;
-//     }
-
-//     return count;
-// }
-
 int main() {
     #ifndef ONLINE_JUDGE
     freopen("../input.txt","r",stdin);
@@ -40,23 +27,11 @@ int main() {
 
     // sort(va.begin(), va.end());
     sort(vb.begin(), vb.end());
-    // for (int x : vb) cout << x << " ";
-    // cout << endl;
-
-    // for (int x : va) 
-
-    // for (int x : va) {
-    //     // int *pos
-    //     cout << x << " " << upperbound(vb, x) << endl;
-    // }
 
     for (int x : va) {
-        auto it = upper_bound(vb.begin(), vb.end(), x);
+        auto it = lower_bound(vb.begin(), vb.end(), x);
         int index = it - vb.begin();
         cout << x << " " << vb.size() - index << endl;
-        // int count = *it - x;
-        // cout << m - count << endl;
-        // int count = pos - x;
     }
 
 
