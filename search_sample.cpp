@@ -91,6 +91,7 @@ int main() {
     // Must sort before search // O(NlogN)
     // Search in range [Left, Right]
     // mid = (left + right)/2
+    // mid = left + (right-left)/2
 
     // Compare
     //  - X = a[mid]
