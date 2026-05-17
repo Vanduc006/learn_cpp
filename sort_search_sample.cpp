@@ -36,4 +36,9 @@ int main() {
     // compare
     for (int x : arr) cout << x << " ";
 
+    // two pointer
+    // int i=0; int j=0; a[n] b[m]
+    // while (i < n && j < m) condition i++, j++
+    // O(n+m) 
+
 }
