@@ -59,5 +59,5 @@ int main() {
     // return count;
 
 
-    // Trailing zero = min(dem(n,2), dem(n,5))
+// Trailing zero = min(dem(n,2), dem(n,5))
 }

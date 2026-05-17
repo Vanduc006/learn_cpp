@@ -118,4 +118,6 @@ int main() {
     int *pos = lower_bound(a, a+n, 3423424);
     cout << *pos << endl;
     cout << pos - a << endl; // index, if not found return a + n
+
+    // Binary search on answer 
 }
