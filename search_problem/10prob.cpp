@@ -48,11 +48,21 @@ int main() {
 
     sort(a, a+n);
 
-    cout << firstPos(a, n, x) << endl;
-    cout << lastPos(a, n, x) << endl;
-    int *p1 = lower_bound(a, a+n, x);
+    // cout << firstPos(a, n, x) << endl;
+    // cout << lastPos(a, n, x) << endl;
+    auto p1 = lower_bound(a, a+n, x);
+    auto p2 = upper_bound(a, a+n, x);
+
+    if (*p1 == x) {
+        cout << p1 - a << endl;
+    } else cout << -1;
+
+    --p2;
+    if (*p2 == x) {
+        cout << p2-a << endl;
+    } else cout << -1;
     cout << p1 - a << endl;
-    int *p2 = upper_bound(a, a+n, x);
+    ++p2;
     cout << p2 - a << endl;
     if (firstPos(a,n,x) < 0 && lastPos(a,n,x) < 0) {
         cout << 0;
