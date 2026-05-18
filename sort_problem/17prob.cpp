@@ -21,10 +21,10 @@ int main() {
 
     int count=0;
     for (int i=0; i < n; i++) {
-        auto it = upper_bound(a+i+1, a+n, k-a[i]);
-        // --it;
-        int pos = it-a;
-        count += n - pos;
+        int *p1 = upper_bound(a+i+1, a+n, k-a[i]);
+        int *p2 = lower_bound(a+i+1, a+n, k-a[i]);
+        // cout << p1-p2 << endl;
+        count += p1-p2;
     }
     cout << count;
 
