@@ -13,23 +13,19 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n; int x; cin >> n >> x;
-    int a[n];
+    int n; int m; cin >> n >> m;
+    int a[n]; 
+    int b[m];
     for (int &x : a) cin >> x;
+    for (int &x : b) cin >> x;
     sort(a, a+n);
-    int count=0;
-    int i=0; int j=n-1;
-    while (i <= j) {
-        if (a[i] + a[j] <= 0) {
-            i++;
-            j--;
-            count++;
-        } else {
-            if (a[i] < a[j]) {
-                j--;
-                count++;
-            }
-        }
+    // for (int x : a) cout << x;
+    for (int x : b) {
+        auto it = lower_bound(a, a+n, x);
+        if (*it > x) it--;
+        if (*it != 0) {
+            cout << *it << endl;
+        } else cout << "-1" << endl;
+        a[it-a] = 0;
     }
-    cout << count;
 }

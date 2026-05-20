@@ -13,22 +13,25 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int n; int x; cin >> n >> x;
+    int n; int m; cin >> n >> m;
     int a[n];
+    int b[m];
     for (int &x : a) cin >> x;
+    for (int &x : b) cin >> x;
+
     sort(a, a+n);
+    sort(b, b+m);
+
+    int i=0; int j=0;
     int count=0;
-    int i=0; int j=n-1;
-    while (i <= j) {
-        if (a[i] + a[j] <= 0) {
-            i++;
-            j--;
+    while (i < n && j < m) {
+        if (abs(a[i] - b[j]) <= 1) {
             count++;
+            i++;
+            j++;
         } else {
-            if (a[i] < a[j]) {
-                j--;
-                count++;
-            }
+            if (a[i] >= b[j]) j++;
+            else i++;
         }
     }
     cout << count;
