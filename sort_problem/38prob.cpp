@@ -21,14 +21,16 @@ int main() {
         cin >> a[i].first >> a[i].second;
     }
     sort(a, a+n, compare);
-
+    // for (pair<int, int> p : a) cout << p.second;
     int end_time = a[0].second;
     int count=1;
     for (int i=1; i < n; i++) {
-        if (a[i].first <= end_time) {
-            end_time = a[i].second;
+        if (a[i].first >= end_time) {
             count++;
+            end_time = a[i].second;
         }
     }
     cout << count;
+
+
 }
