@@ -22,6 +22,7 @@ void generate() {
         a[i] == 1;
     }
 }
+
 int main() {
     #ifndef ONLINE_JUDGE
     freopen("../input.txt","r",stdin);
@@ -32,6 +33,8 @@ int main() {
 
     // Brute force 
     // cau hinh dau tien - cau hinh cuoi cung   
+
+    // Generate binary
     // Eg binary 00000
     // if (bin == 0) bin = 1; end
     // else bin = 0;
@@ -42,5 +45,28 @@ int main() {
         cout << endl;
         generate();
     }
+
+    // Giao hoan n, k
+    // generate() ... while (i >= 1 && a[i] == n - k + i)
+        // i + 1 => k
+        // j=i+1; a[j]=a[j-1]+1
+
+
+    // Hoan vi 1 den n
+    // Eg n=3; 123 132 213 ...
+    // generate() i=n-1 while(i >= 1 && a[i] > a[i+1])
+        // a[j] nho nhat ma > a[i]
+        // int j=n;
+        // while (a[i] > a[j]) --j;
+        // swap(a[i], a[j]);
+        // xep tang dan tu i+1, n;
+        // sort(a+i+1, a+n+1);
+    // built in fucntion : next_permutation(a, a+n)
+    // prev_permutation(a, a+n)
+
+
+    // Sinh phan hoach N
+    // Eg 5 4+1 3+2 2+2+1 ...
+
 
 }

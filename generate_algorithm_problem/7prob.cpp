@@ -32,20 +32,22 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
     cin >> n;
+
     for (int i=1; i <= n; i++) {
-        cin >> a[i];
-        // a[i] = i;
+        // cin >> a[i];
+        a[i] = i;
+    }
+
+    map<int, string> mp;
+    for (int i=1; i <= n; i++) {
+        string value; cin >> value;
+        mp[a[i]]=value;
     }
     
-    // while(!final) {
-    //     for (int i=1; i <= n; i++) cout << a[i] << " ";
-    //     cout << endl;
-    //     generate();
-    // }
-    generate();
-    if (final) {
-        for (int i=1; i <= n; i++) cout << i << " ";
-    } else {
-        for (int i=1; i <= n; i++) cout << a[i] << " ";
+    while(!final) {
+        for (int i=1; i <= n; i++) cout << mp[a[i]] << " ";
+        cout << endl;
+        generate();
     }
+
 }
