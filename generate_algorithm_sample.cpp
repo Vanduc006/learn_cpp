@@ -67,6 +67,32 @@ int main() {
 
     // Sinh phan hoach N
     // Eg 5 4+1 3+2 2+2+1 ...
+        // total=n
+        // min=1
+        // giam dan
 
+        // a[i] != 1, a[i]--
+            // int i=cnt;
+            // int sum=0;
+
+            // while (i >= 1 && a[i] == 1) {
+            //     i--;
+            // } if (i == 0) {
+            //     final = true;
+            // } else {
+            //     a[i]--;
+            //     sum++;
+            //     int x = a[i];
+            //     while (sum > x) {
+            //         i++;
+            //         a[i]=x;
+            //         sum -= x;
+            //     }
+            //     if (sum > 0) {
+            //         a[i] = sum; 
+            //     }
+            //     cnt=i;
+            // }
+        // }
 
 }
