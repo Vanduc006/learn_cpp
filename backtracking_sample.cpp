@@ -69,5 +69,7 @@ int main() {
     n=2;
     backtracking(1);
 
+    // nhanh can
+    // else if (d + (n-i+1)*cmin < ans)
 
 }

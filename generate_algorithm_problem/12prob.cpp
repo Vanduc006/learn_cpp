@@ -35,6 +35,7 @@ int check2() {
         }
     }
     return cnt==1;
+    
 }
 
 int main() {
